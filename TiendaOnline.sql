@@ -13,3 +13,14 @@ Estado varchar(100) not null,
 Codigo_postal varchar(10) not null,
 Pais varchar(100) not null
 );
+
+-- Crear la tabla Clientes (con relacion 1:1 con Direciones)
+create table Clientes (
+ID_cliente int auto_increment primary key,
+Nombre varchar (100) not null,
+Email varchar (100) not null unique,
+Telefono varchar(15),
+Fecha_registro date,
+ID_direccion int unique, 
+foreign key (ID_direccion) references Direcciones(ID_direccion) 
+);
