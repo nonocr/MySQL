@@ -42,7 +42,6 @@ ID_cliente int,
 Fecha_pedido date not null,
 Estado varchar(50),
 Total decimal(10, 2),
-ID_direccion int unique, 
 foreign key (ID_cliente) references Clientes(ID_cliente) 
 );
 
